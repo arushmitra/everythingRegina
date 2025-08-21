@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  <title>My First Website!</title>
-    </head>
-    <body>
-  <p>This is an amazing website!</p>
-    </body>
+<head>
+  <title>Regina!</title>
+  <script>
+    function showABC() {
+      document.getElementById("abc-buttons").style.display = "block";
+    }
+
+    function sayHello(buttonName) {
+      document.getElementById("output").innerText = buttonName;
+    }
+  </script>
+</head>
+<body>
+  <p>Your one stop shop for everything Regina!</p>
+
+  <button onclick="showABC()">MPs for Regina</button>
+  <div id="abc-buttons" style="display:none; margin-top:10px;">
+    <button onclick="sayHello('Michael Kram')">Michael Kram</button>
+    <button onclick="sayHello('Andrew Scheer')">Andrew Scheer</button>
+    <button onclick="sayHello('Warren Steinley')">Warren Steinley</button>
+  </div>
+
+  <p id="output"></p>
+</body>
 </html>
